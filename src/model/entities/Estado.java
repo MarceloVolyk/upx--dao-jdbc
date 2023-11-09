@@ -1,22 +1,19 @@
 package model.entities;
 
-import java.io.Serializable;
 import java.util.Objects;
 
-public class Department implements Serializable{
+public class Estado {
 
-	private static final long serialVersionUID = 1L;
-	
 	private Integer id;
-	private String name;
+	private String nome;
 	
-	public Department() {
-
+	public Estado() {
+		
 	}
 
-	public Department(Integer id, String name) {
+	public Estado(Integer id, String nome) {
 		this.id = id;
-		this.name = name;
+		this.nome = nome;
 	}
 
 	public Integer getId() {
@@ -27,14 +24,14 @@ public class Department implements Serializable{
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
-
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -48,13 +45,13 @@ public class Department implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Department other = (Department) obj;
+		Estado other = (Estado) obj;
 		return Objects.equals(id, other.id);
 	}
 
 	@Override
 	public String toString() {
-		return "Department [id=" + id + ", name=" + name + "]";
+		return nome + ", (ID: " + id + ")";
 	}
 	
 	

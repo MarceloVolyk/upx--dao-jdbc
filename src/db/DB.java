@@ -45,7 +45,7 @@ public class DB {
 	//carregando as propriedades (db.properties):
 	
 	private static Properties loadProperties() {
-		try(FileInputStream fs = new FileInputStream("db.properties")){
+		try(FileInputStream fs = new FileInputStream("db.upxproperties")){
 			Properties props = new Properties();
 			props.load(fs);
 			return props;
